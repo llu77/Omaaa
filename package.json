@@ -1,0 +1,92 @@
+{
+  "name": "sahl-salon-management",
+  "version": "2.1.0",
+  "description": "نظام سهل - إدارة الصالون المتكامل - نظام متكامل لإدارة الصالونات والحلاقين",
+  "main": "worker.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build:types": "tsc --noEmit",
+    "format": "prettier --write '**/*.{ts,js,json,md}'",
+    "lint": "eslint . --ext .ts",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "salon",
+    "management",
+    "cloudflare-workers",
+    "typescript",
+    "d1",
+    "r2",
+    "kv",
+    "appointment",
+    "booking",
+    "inventory",
+    "customers",
+    "transactions"
+  ],
+  "author": "فريق تطوير سهل",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231025.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.19.0"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "arrowParens": "avoid"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "import"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ]
+        }
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahl-team/sahl-salon-management.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sahl-team/sahl-salon-management/issues"
+  },
+  "homepage": "https://github.com/sahl-team/sahl-salon-management#readme"
+}
